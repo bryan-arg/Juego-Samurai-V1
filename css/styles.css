@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Pangolin&display=swap');
+
+/*Estilos Principales*/
+body{
+	font-family: 'Pangolin', cursive;
+	/*background:no-repeat center/100% url("../assets/fondo-inicio.jpg");
+	background:no-repeat url("../assets/fondo-inicio.png");*/
+	top :0%;
+	/*size: 100% 100%;*/
+	background:no-repeat url("../assets/fondo-inicio.png");
+	background-size: cover;
+}
+
+header .titulo{
+	border: solid;
+	border-color: #FFC26F;
+	border-radius: 10%;
+	color: black;
+}
+
+input{
+	display: none;
+}
+
+button{
+	width: 180px;
+	height: 40px;
+	background-color: transparent;
+	border-radius: 20px;
+	border: 2px solid white;
+	color: white;
+	font-family: 'Pacifico';
+	margin-top: 30px;
+}
+
+/*Estilos Header*/
+header{
+	display: flex;
+	justify-content: center;
+}	
+
+/*Pagina Inicial*/
+.titulo{
+	color : lightcoral;
+}
+.subtitulo{
+	color: white;
+	font-size:40px;
+	margin:10px;
+}
+
+/*Seleccionar Samurai*/
+/*
+#text-seleccion{
+	font-size:40px;
+}
+
+
+
+#select-samurai{
+	display: none;
+}
+*/
+
+#seleccionar-samurai{
+	display: flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items: center
+}
+
+.tarjetas{
+	display: flex; 
+	gap: 10px;
+}
+
+.tarjeta-samurai{
+	width: 170px;
+	height: 80px;
+	
+	padding: 10px;
+	/*Permite que el padding quede del tamañ0 determinado para cada elemento*/
+	box-sizing: border-box;
+	margin: 5px;
+	border: 1px;
+	display: flex;
+	align-content:center ;
+	justify-content: center;
+}
+
+.tarjeta-samurai img{
+	width: 100px;
+	height: 100px;
+}
+
+/*CSS Selección de personaje*/
+input:checked + label {
+	border:solid;
+	border-color: red;
+	width:230px;
+	height: 230px;
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	backdrop-filter: blur(10px);
+}
+
+input:checked + label>img {
+	width:150px;
+	height: 150px;
+}
+
+input:checked + label>p {
+	font-size:30px;
+	margin:0px;
+}
+
+@media(input:checked){
+	#select-samurai{
+		background-color: red;
+	}
+	
+}
+
+/*Display ataques*/
+
+
+
+.info-samurai-jugador > img{
+	width: 100px;
+	height: 100px;
+	
+}
+
+#vidas-jugador > img{
+	width:50px;
+	height:50px;
+	
+}
+
+
+.info-samurai-enemigo > img{
+	width: 100px;
+	height: 100px;
+	
+}
+.visual-jugadores{
+	
+	display: flex;
+	
+}
+.info-samurai-jugador {
+	width:500px;
+}
+
+.visual-jugadores .info-samurai-jugador ~ .info-samurai-enemigo{
+	align-content: right;
+}
+
+/* parte de ataques*/
+
+#seleccionar-ataque{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ataques button{
+	border-color: grey;
+}
+
+/*Registro*/
+#registro{
+	color:black;
+	height: 116px;
+    width: 70%;
+	
+}

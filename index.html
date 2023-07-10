@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<script src="./js/samurais.js"></script>
+		<link rel="stylesheet" href="./css/styles.css"/>
+		<title> Samurais-cut⚔</title>
+	</head>
+	<body>
+		<header>
+			<h1 class="titulo" >Samurais-cut⚔</h1>
+		</header>
+		
+		<section id="seleccionar-samurai">
+			<h2 class="subtitulo">Elige tu Samurai:</h2>
+			
+			<div class="show-Select">
+				<!--Muestra personaje seleccionado de forma grande-->
+				<p id="text-seleccion">Selecciona personaje</p>
+			</div>	
+			
+			<div class="tarjetas">
+			
+				<input type="radio" name="samurai" id="ichigo" />
+				<label class="tarjeta-samurai" for="ichigo">
+					<p>Ichigo</p>
+					<img src="./assets/samurai-ichigo.png" alt="Ichigo-Samurai">
+				</label>
+				
+				<input type="radio" name="samurai" id="chems"/>
+				<label class="tarjeta-samurai"  for="chems">
+					<p>Samurai-Chems</p>
+					<img src="./assets/chems-samurai.png" alt="Chems-Samurai">
+				</label>
+				
+				<input  type="radio" name="samurai" id="samurai"/>
+				<label class="tarjeta-samurai"  for="samurai">
+					<p>Samurai</p>
+					<img src="./assets/samurai.png" alt="Samurai">
+				</label>
+
+			</div>
+			<button id="select-samurai" >Seleccionar</button>	
+		</section>
+
+		<section id="seleccionar-ataque">
+		<!-- visual de los personajes seleccionados-->
+			
+			<div class="visual-jugadores">
+				<div class="info-samurai-jugador">
+					<div id="vidas-jugador"><img id="vida-uno" src="./assets/espada.png"></img><img id="vida-dos" src="./assets/espada.png"></img><img id="vida-tres" src="./assets/espada.png"></img></div>
+					<p><strong><span id="samurai-jugador"></span></strong>tiene <span id="vidaJugador">3</span> vidas</p>
+					<img id="img-jug">
+				</div>
+				<div class="info-samurai-enemigo">
+					<div id="vidas-jugador"><img id="vida-uno" src="./assets/espada.png"></img><img id="vida-dos" src="./assets/espada.png"></img><img id="vida-tres" src="./assets/espada.png"></img></div>
+					<p><strong><span id="samurai-enemigo"></span></strong>tiene <span id="vidaEnemigo">3</span> vidas</p>
+					<img id="img-jug-enemigo">
+				</div>
+			</div>
+			<h2 class="subtitulo">Elige tu ataque:</h2>
+			<div class="ataques">
+				<button id="boton-Fuego">Ataque arriba🔥</button>
+				<button id="boton-Agua">Ataque medio💧</button>
+				<button id="boton-Tierra">Ataque abajo🌵</button>
+			</div>
+			
+		</section>
+			
+		<section id="mensajes">
+			<p>Información de la batalla</p>
+			<p id="resultado"></p>
+			<div>
+			<div id="ataque-Jugador"></div>
+			<div id="ataque-Enemigo"></div>
+			<p>Tu mascota <strong><span id="samuraiJugador"></span></strong> tiene <span id="vidaJugador">3</span> vidas</p>
+			<p>La mascota de tu enemigo<span id="samuraiEnemigo"></span> tiene <span id="vidaEnemigo"> 3</span> vidas</p>
+			<textarea name="" id="registro" disabled ></textarea>
+		</div>
+		</section>
+		
+		
+		
+		
+		<section id="reiniciar">
+			<button id="boton-Reiniciar">Reiniciar</button>
+		</section>
+		
+		
+		
+		
+
+	</body>
+</html>
