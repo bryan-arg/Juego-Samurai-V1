@@ -35,12 +35,9 @@ function seleccionarMascotaJugador(){
 	let sectionSeleccionarMascota = document.getElementById("seleccionar-samurai");
 	sectionSeleccionarMascota.style.display = 'none';
 	
-	
 	let sectionSeleccionarAtaque = document.getElementById("seleccionar-ataque");
 	//muestra la sección oculta con "block/flex" depende del tipo de display que se requiera
 	sectionSeleccionarAtaque.style.display = 'flex';
-	
-	
 	
 	let sectionMensajeBatalla = document.getElementById("mensajes");
 	sectionMensajeBatalla.style.display = 'block';
@@ -97,8 +94,6 @@ function seleccionarMascotaEnemigo(){
 		imagenEnemigo.src ='./assets/samurai.png';
 		
 	}
-	
-
 }
 
 //Sección ataques
@@ -145,11 +140,8 @@ function crearMensaje(resultado){
 	let nuevoAtaqueJ= document.createElement('p');
 	let nuevoAtaqueE= document.createElement('p');
 	 
-	seccionMensaje.innerHTML=resultado;
 	nuevoAtaqueJ.innerHTML=ataqueJugador;
 	nuevoAtaqueE.innerHTML=ataqueEnemigo;
-
-	seccionMensajes.appendChild(notificacion);
 
 }	
 	
