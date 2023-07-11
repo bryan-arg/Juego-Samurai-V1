@@ -21,12 +21,11 @@ function iniciarJuego(){
 	//Recupera dato del html
 	let botonMascotaJugador = document.getElementById('select-samurai');
 	botonMascotaJugador.addEventListener('click',seleccionarMascotaJugador);
-	
-	let botonFuego =document.getElementById('boton-Fuego');
+	let botonFuego =document.getElementById('boton-Arriba');
 	botonFuego.addEventListener('click',ataqueFuego);
-	let botonAgua =document.getElementById('boton-Agua');
+	let botonAgua =document.getElementById('boton-Medio');
 	botonAgua.addEventListener('click',ataqueAgua);
-	let botonTierra =document.getElementById('boton-Tierra');
+	let botonTierra =document.getElementById('boton-Abajo');
 	botonTierra.addEventListener('click',ataqueTierra);
 	let botonReiniciar= document.getElementById('boton-Reiniciar');
 	botonReiniciar.addEventListener('click',reiniciarJuego);
@@ -56,33 +55,23 @@ function seleccionarMascotaJugador(){
     if (inputHipodoge.checked) {
 		//Permite traer elementos HTML para modificar los atributos del elemento
 		spanMascotaJugador.innerHTML = 'ichigo';
-		
 		//Crea la conexión con el DOM con el ID mencionado
 		let imagenAliado= document.getElementById('img-jug');
 		//Crea atributo src
 		imagenAliado.src ='./assets/samurai-ichigo.png';
-		//Agrega el atributo al HTML
-		//imgSamuraiAliado.appendChild(imagenAliado);
-		//imgSamuraiAliado.innerHTML='agregado';
-
-		
 	} else if (inputCapipepo.checked) {
 		spanMascotaJugador.innerHTML = 'chems';
 		let imagenAliado= document.getElementById('img-jug');
 		imagenAliado.src ='./assets/chems-samurai.png';
-		//imgSamuraiAliado.appendChild(imagenAliado);
 	} else if (inputRatigueya.checked) {
         spanMascotaJugador.innerHTML = 'samurai';
 		let imagenAliado= document.getElementById('img-jug');
 		imagenAliado.src ='./assets/samurai.png';
-		//imgSamuraiAliado.appendChild(imagenAliado);
     }else{
 		alert('Selecciona una mascota');
 	}
-	
 	//Se pone aca para que apenas se seleccione se desconocido la mascota
 	seleccionarMascotaEnemigo();
-	
 }
 
 
@@ -91,29 +80,22 @@ function seleccionarMascotaEnemigo(){
 	let spanMascotaEnemigo = document.getElementById('samurai-enemigo');
 	let imgSamuraiEnemigo=  document.getElementById('img-Samurai-Enemigo');
 	
-	
-		
-	
 	if(mascotaAleatorio==1){
 		console.log();
 		spanMascotaEnemigo.innerHTML = 'ichigo';
-		
 		let imagenEnemigo= document.getElementById('img-jug-enemigo');
 		imagenEnemigo.src ='./assets/samurai-ichigo.png';
-		//imgSamuraiEnemigo.appendChild(imagenEnemigo);
 		
 	}else if(mascotaAleatorio==2){
 		spanMascotaEnemigo.innerHTML = 'chems';
-		
 		let imagenEnemigo= document.getElementById('img-jug-enemigo');
 		imagenEnemigo.src ='./assets/chems-samurai.png';
-		//imgSamuraiEnemigo.appendChild(imagenEnemigo);
+		
 	}else{
 		spanMascotaEnemigo.innerHTML = 'samurai';
-		
 		let imagenEnemigo= document.getElementById('img-jug-enemigo');
 		imagenEnemigo.src ='./assets/samurai.png';
-		//imgSamuraiEnemigo.appendChild(imagenEnemigo);
+		
 	}
 	
 
@@ -123,8 +105,6 @@ function seleccionarMascotaEnemigo(){
 function ataqueFuego(){	
 	ataqueJugador ="Fuego";
 	ataqueEnemigoMascota();
-	/*let spanAtaqueJugador = document.getElementById('ataque-Aliado');
-	spanAtaqueJugador.innerHTML= ataqueJugador;*/
 }
 function ataqueAgua(){	
 	ataqueJugador ="Agua";
@@ -141,24 +121,16 @@ function ataqueEnemigoMascota(){
 	let ataqueEnemigoAleatorio= aleatorio(1,3);
 	if(ataqueEnemigoAleatorio==1){
 		ataqueEnemigo= 'Fuego';
-		
 	}else if(ataqueEnemigoAleatorio==2){
 		ataqueEnemigo= 'Agua';
-		
 	}else{
 		ataqueEnemigo= 'Tierra';
-		
 	}
 	combate();
 }	
 	
 function crearMensaje(resultado){
 	let seccionMensajes = document.getElementById('mensajes');
-	//Crea un elemento tipo parrafo en HTML
-	//let parrafo= document.createElement('p');
-	//parrafo.innerHTML= 'Tu mascota ataco con'+ataqueJugador+'Y el enemigo'+ataqueEnemigo+ 'tu'+resultado;
-	//Permite la insersión del elemento en la sección
-	//seccionMensajes.appendChild(parrafo);
 	let seccionMensaje = document.getElementById('resultado');
 	let seccionAtaqueJugador = document.getElementById('ataque-Jugador');
 	let seccionAtaqueEnemigo = document.getElementById('ataque-Enemigo');
@@ -169,19 +141,15 @@ function crearMensaje(resultado){
 	area.value=area.value+ataqueJugador+'\n';
 	area.value=area.value+ataqueEnemigo+'\n';
 	
-	
 	let notificacion= document.createElement('p');
 	let nuevoAtaqueJ= document.createElement('p');
 	let nuevoAtaqueE= document.createElement('p');
 	 
-	
 	seccionMensaje.innerHTML=resultado;
 	nuevoAtaqueJ.innerHTML=ataqueJugador;
 	nuevoAtaqueE.innerHTML=ataqueEnemigo;
-	
+
 	seccionMensajes.appendChild(notificacion);
-	//seccionAtaqueJugador.appendChild(nuevoAtaqueJ);
-	//seccionAtaqueEnemigo.appendChild(nuevoAtaqueE);
 
 }	
 	
@@ -189,7 +157,6 @@ function mensajeFinal(resultado){
 	let seccionMensajes = document.getElementById('mensajes');
 	//Crea un elemento tipo parrafo en HTML
 	let parrafo= document.createElement('p');
-
 	
 	parrafo.innerHTML= resultado;
 	//Permite la insersión del elemento en la sección
@@ -206,6 +173,7 @@ function mensajeFinal(resultado){
 function combate(){
 	let spanVidasJugador= document.getElementById('vidaJugador');
 	let spanVidasEnemigo= document.getElementById('vidaEnemigo');
+	
 	if (ataqueEnemigo ==ataqueJugador ) {
 		crearMensaje("EMPATE");
 	} else if (ataqueJugador== 'Fuego' && ataqueEnemigo == 'Tierra') {
@@ -235,22 +203,16 @@ function revisarVidas(){
 	}else if(vidasJugador==0){
 		mensajeFinal("PERDISTE LA PARTIDA");
 	}
-	
-	
 }
 
-
 function reiniciarJuego(){
-	//Se refiere location en la que se encuentra
-	//La función reload recarga la pagina
+	//Se refiere location a pagina la que se encuentra -->La función reload recarga la pagina
 	location.reload();
 }
 
 function aleatorio(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min)
 }
-
-
 
 //Permite cargar los eventos y variables apenas cargue todo el HTML
 window.addEventListener('load',iniciarJuego);

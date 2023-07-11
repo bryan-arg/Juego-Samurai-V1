@@ -4,10 +4,7 @@
 /*Estilos Principales*/
 body{
 	font-family: 'Pangolin', cursive;
-	/*background:no-repeat center/100% url("../assets/fondo-inicio.jpg");
-	background:no-repeat url("../assets/fondo-inicio.png");*/
 	top :0%;
-	/*size: 100% 100%;*/
 	background:no-repeat url("../assets/fondo-inicio.png");
 	background-size: cover;
 }
@@ -51,18 +48,6 @@ header{
 }
 
 /*Seleccionar Samurai*/
-/*
-#text-seleccion{
-	font-size:40px;
-}
-
-
-
-#select-samurai{
-	display: none;
-}
-*/
-
 #seleccionar-samurai{
 	display: flex;
 	flex-direction: column;
@@ -124,9 +109,6 @@ input:checked + label>p {
 }
 
 /*Display ataques*/
-
-
-
 .info-samurai-jugador > img{
 	width: 100px;
 	height: 100px;
@@ -171,9 +153,18 @@ input:checked + label>p {
 }
 
 /*Registro*/
+#informacion-batalla{
+	display:flex;
+	align-content:center;
+	justify-content:center;
+}
+
 #registro{
 	color:black;
 	height: 116px;
     width: 70%;
-	
+}
+
+#mensajes < p{
+	justify-content:center;
 }
